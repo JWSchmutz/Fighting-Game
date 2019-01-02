@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="assets/css/style.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div id="healths">
+        <h3>Roroko</h3>
+        <div id="roroko-health"><div id="roroko-hp"></div></div>
+        <h3>Shroomage</h3>
+        <div id="shroomage-health"><div id="shroomage-hp"></div></div>
+      </div>
+      <img id="roroko" src="assets/images/roroko.gif" alt="" />
+
+      <img
+        class="enemy flipped"
+        id="shroomage"
+        src="assets/images/shroomage-walk.gif"
+        alt=""
+      />
+    </div>
+    <div class="failure hidden">
+      <h2 class="failure-text">You Lost!</h2>
+      <img
+        src="assets/images/shroomage-victory.gif"
+        alt=""
+        class="game-over-gif"
+      />
+      <button class="play-again">Play Again?</button>
+    </div>
+    <div class="victory hidden">
+      <h2 class="victory-text">Victory!</h2>
+      <img
+        src="assets/images/roroko-victory.gif"
+        alt=""
+        class="game-over-gif"
+      />
+      <button class="play-again">Play Again?</button>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>
