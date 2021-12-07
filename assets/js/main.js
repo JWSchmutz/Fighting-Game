@@ -132,7 +132,7 @@ window.addEventListener("gamepadconnected", function (e) {
     if (moveLeftIsPressed) return moveLeft();
     if (moveRightIsPressed) return moveRight();
     if (notMovingOrAttacking) roroko.attr("src", "assets/images/roroko.gif");
-  }, 1);
+  }, 10);
 });
 
 setInterval(function controlShroomage() {
