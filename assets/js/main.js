@@ -127,10 +127,10 @@ window.addEventListener("gamepadconnected", function (e) {
     const moveRightIsPressed = newGp.axes[0] >= 0.5;
     const notMovingOrAttacking =
       newGp.axes[0] >= -0.5 && newGp.axes[0] <= 0.5 && !attackTimer;
+    if (jumpIsPressed) jump();
+    if (attackIsPressed) return attack();
     if (moveLeftIsPressed) return moveLeft();
     if (moveRightIsPressed) return moveRight();
-    if (attackIsPressed) return attack();
-    if (jumpIsPressed) return jump();
     if (notMovingOrAttacking) roroko.attr("src", "assets/images/roroko.gif");
   }, 1);
 });
