@@ -117,18 +117,10 @@ const jump = () => {
 };
 
 window.addEventListener("gamepadconnected", function (e) {
-  console.log(
-    "Gamepad connected at index %d: %s. %d buttons, %d axes.",
-    e.gamepad.index,
-    e.gamepad.id,
-    e.gamepad.buttons.length,
-    e.gamepad.axes.length
-  );
   gp = navigator.getGamepads()[e.gamepad.index];
   setInterval(function () {
     if (!gp || gameOver) return;
     const newGp = navigator.getGamepads()[e.gamepad.index];
-    console.log(newGp.buttons, newGp.axes[0]);
     const jumpIsPressed = newGp.buttons[0].pressed;
     const attackIsPressed = newGp.buttons[7].pressed;
     const moveLeftIsPressed = newGp.axes[0] <= -0.5;
